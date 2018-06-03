@@ -1,0 +1,72 @@
+.map {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.tile {
+  height: 30px;
+  width: 30px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+i {
+  font-size: 26px;
+
+  &.fa-male {
+    color: white;
+  }
+
+  &.fa-android {
+    color: #00AA00;
+
+    &.withplayer {
+      color: red;
+    }
+  }
+}
+
+.wall {
+  background-color: #700000;
+}
+
+.floor {
+  background-color: #101010;
+}
+
+.exit {
+  background-color: #959500;
+}
+
+.escaped {
+  color: green;
+}
+
+.champion {
+  color: gold;
+  animation-duration: 0.5s;
+  animation-name: hop;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.stuck {
+  color: red;
+}
+
+@keyframes hop {
+  from {
+    margin-top: 1px;
+  }
+
+  to {
+    margin-top: 20px;
+  }
+}
